@@ -1,0 +1,73 @@
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html body {
+  box-sizing: border-box;
+}
+.container {
+  display: block;
+  padding: 0 1rem;
+  margin: 2rem auto;
+  max-width: 480px;
+}
+h1 {
+  color: black;
+}
+form {
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.todo {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  margin: 0 0.5rem;
+  border: solid 2px #007bff;
+}
+form > .todo,
+button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: solid 2px #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.todo:focus {
+  outline: 0;
+  border: solid 3px #007bff;
+}
+ul {
+  padding: 0;
+}
+li {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fae6e6;
+  border-radius: 4px;
+}
+[type="checkbox"] {
+  margin-right: 1rem;
+  width: 25px;
+  height: 25px;
+}
+.editable {
+  display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+  border: solid 3px transparent;
+  border-radius: 4px;
+}
+.editable:focus {
+  outline: 0;
+  border: solid 3px #007bff;
+  background-color: #a5ccf7;
+}
