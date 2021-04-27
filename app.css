@@ -71,3 +71,6 @@ li {
   border: solid 3px #007bff;
   background-color: #a5ccf7;
 }
+s {
+  text-decoration: line-through;
+}
