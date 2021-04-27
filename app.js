@@ -38,13 +38,28 @@ function render() {
     input.type = "checkbox";
     input.addEventListener('change', (e) => {
         if (e.target.checked) {
+            const chk = e.target.parentNode
+            let id = parseInt(chk.getAttribute('id'));
+            todos.filter((todo, i) => {
+                if (i === id) {
+                    todo.complete = true;
+                };
+                localStorage.setItem('list2', JSON.stringify(todos));
+            })
             let s = document.createElement('s');
             temp = span.textContent;
             s.innerText = span.textContent;
-            console.log('checked, temp: ', temp);
             span.textContent = '';
             span.append(s);
         } else {
+            const chk = e.target.parentNode
+            let id = parseInt(chk.getAttribute('id'));
+            todos.filter((todo, i) => {
+                if (i === id) {
+                    todo.complete = false;
+                };
+            })
+            localStorage.setItem('list2', JSON.stringify(todos));
             span.textContent = temp;
         }
     });
